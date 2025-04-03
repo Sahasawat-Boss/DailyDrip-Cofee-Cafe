@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className=" px-6 py-10">
             <div className="max-w-2xl mx-auto grid grid-cols-2 gap-4 text-sm">
-                
+
                 {/* DailyDrip Section */}
                 <div>
                     <h4 className=" text-lg font-semibold mb-2">DailyDrip</h4>
@@ -15,13 +15,23 @@ export default function Footer() {
 
                 {/* Contact Info */}
                 <div>
-                    <h4 className=" text-lg font-semibold mb-2">CONTACT INFORMATION</h4>
-                    <ul className="space-y-2">
-                        <li>123 Nimmanhaemin Road,</li>
+                    <h4 className="text-lg font-semibold mb-2">CONTACT INFORMATION</h4>
+                    <ul className="space-y-2 text-sm">
+                        <li>📍 123 Nimmanhaemin Road,</li>
                         <li>Chiang Mai, Thailand 50200</li>
-                        <li>+66 86 868 4466</li>
-                        <li>info@bossbsynth.com</li>
-                        <li>bossbsynth.com</li>
+                        <li>📞 +66 86 868 4466</li>
+                        <li>📧 info@bossbsynth.com</li>
+                        <li>
+                            🌐{' '}
+                            <a
+                                href="https://bossbsynth.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline text-blue-500 hover:text-blue-800 transition"
+                            >
+                                bossbsynth.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +42,7 @@ export default function Footer() {
                     © 2025 DailyDrip. All Rights Reserved. Designed by{" "}
                     <a href="https://bossbsynth.com" target="_blank" rel="noopener noreferrer" className="text-[#da953c] hover:underline">BossBsynth</a>{" "}
                     <div>
-                        Demo Images: 
+                        Demo Images:
                         <a href="https://unsplash.com" className="text-[#da953c] hover:underline" target="_blank" rel="noopener noreferrer"> Unsplash </a>
                         and
                         <a href="https://www.pexels.com/photo/capturing-coffee-moment-with-smartphone-29074308/" className="text-[#da953c] hover:underline" target="_blank" rel="noopener noreferrer"> pexels </a>

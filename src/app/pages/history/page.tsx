@@ -7,9 +7,11 @@ export default function History() {
     <section className="px-8 sm:px-12 pt-26 pb-12">
       <div className="max-w-2xl mx-auto relative">
         <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
-          <div>Our History </div>
-          <div className="ml-2 mt-2 text-base text-amber-700"><CiCoffeeBean /></div>
-          <div className="-ml-2 mt-4 text-base rotate-30 text-amber-700"><CiCoffeeBean /></div>
+          <div className="relative">
+            Our History
+            <div className="absolute top-0 -right-6  text-base text-amber-700"><CiCoffeeBean /></div>
+            <div className="absolute top-3 -right-7.5 text-base rotate-30 text-amber-700"><CiCoffeeBean /></div>
+          </div>
         </div>
 
         <p className="mb-4 mt-4 leading-relaxed indent-5">
@@ -39,7 +41,7 @@ export default function History() {
             className="h-65 w-65 object-cover rounded-md shadow-lg mx-auto"
           />
         </div>
-        
+
         <p className="mb-6 mt-4 leading-relaxed indent-5">
           We remain proudly rooted in Chiang Mai, working with local farms and artisans to deliver
           an authentic café experience in every sip.
