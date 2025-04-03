@@ -6,9 +6,9 @@ import CofeeCup from '../deco/CofeeCup';
 
 const menuItems = [
     { label: 'Home', href: '/' },
-    { label: 'Menu', href: '/X' },
+    { label: 'Menu', href: '/pages/menu' },
     { label: 'History', href: '/pages/history' },
-    { label: 'Contact', href: '/X' },
+    { label: 'Contact', href: '/pages/contact' },
 ];
 
 export default function Navbar() {
@@ -63,12 +63,12 @@ export default function Navbar() {
                             <li key={label} className="relative group">
                                 <Link
                                     href={href}
-                                    className={`transition-colors ${isActive ? 'text-yellow-600' : 'hover:text-yellow-600'}`}
+                                    className={`transition-colors font-semi ${isActive ? 'text-[#d4a957] font-semibold' : 'hover:text-[#c5b089]'}`}
                                 >
                                     {label}
                                 </Link>
                                 <span
-                                    className={`absolute left-0 -bottom-1 h-[2px] bg-yellow-600 transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                    className={`absolute left-0 -bottom-1 h-[2px] bg-[#d4a957] transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
                                         }`}
                                 ></span>
                             </li>

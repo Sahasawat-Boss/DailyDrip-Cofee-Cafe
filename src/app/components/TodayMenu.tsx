@@ -3,33 +3,29 @@ const menuItems = [
         title: "Iced Thai Latte",
         price: "40 Bath",
         image: "/images/menu/menu5.jpg",
-        description:
-            "Chilled Thai coffee with creamy sweetness.",
+        description: "Chilled Thai coffee with creamy sweetness.",
+        tag: "Best Seller",
     },
     {
         title: "Cofee Matcha",
         price: "55 Bath",
         image: "/images/menu/menu6.jpg",
-        description:
-            "Matcha and espresso blend — earthy and bold.",
+        description: "Matcha and espresso blend — earthy and bold.",
+        tag: "Best Seller",
     },
     {
         title: "Classic Espresso",
         price: "45 Bath",
         image: "/images/menu/menu3.jpeg",
-        description:
-            "Bold Northern Thai espresso — rich and energizing.",
+        description: "Bold Northern Thai espresso — rich and energizing.",
     },
     {
         title: "Drip Brew (Pour Over)",
         price: "40 Bath",
         image: "/images/menu/menu7.jpg",
-        description:
-            "Smooth pour-over from Chiang Mai’s finest beans.",
+        description: "Smooth pour-over from Chiang Mai’s finest beans.",
     },
-
 ];
-
 
 export default function TodayMenu() {
     return (
@@ -48,19 +44,32 @@ export default function TodayMenu() {
                     {menuItems.map((item, index) => (
                         <div
                             key={index}
-                            className="flex gap-4 lg:flex-col p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-r"
+                            className="relative flex gap-4 lg:flex-col p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-r"
                         >
+                            {/* Tag Badge */}
+                            {item.tag && (
+                                <span className="absolute top-1 -left-4 bg-yellow-300/85 text-black text-[11px] font-semibold px-2 py-0.5 rounded shadow-md z-10">
+                                    {item.tag}
+                                </span>
+                            )}
+
+                            {/* Image */}
                             <img
                                 src={item.image}
                                 alt={item.title}
                                 className="w-30 h-30 object-cover rounded-md mb-4"
                             />
+
+                            {/* Text Content */}
                             <div>
                                 <h3 className="text-xl font-semibold">{item.title}</h3>
-                                <p className="font-semibold mb-2 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">{item.price}</p>
+                                <p className="font-semibold mb-2 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">
+                                    {item.price}
+                                </p>
                                 <p className="text-sm">{item.description}</p>
                             </div>
                         </div>
+
                     ))}
                 </div>
 
