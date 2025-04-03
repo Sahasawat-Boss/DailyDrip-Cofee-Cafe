@@ -6,7 +6,7 @@ export default function History() {
   return (
     <section className="px-8 sm:px-12 pt-26 pb-12">
       <div className="max-w-2xl mx-auto relative">
-        <div className="flex text-xl md:text-2xl font-bold italic mb-3.5">
+        <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
           <div>Our History </div>
           <div className="ml-2 mt-2 text-base text-amber-700"><CiCoffeeBean /></div>
           <div className="-ml-2 mt-4 text-base rotate-30 text-amber-700"><CiCoffeeBean /></div>

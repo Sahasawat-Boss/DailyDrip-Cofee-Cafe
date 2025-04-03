@@ -58,13 +58,13 @@ export default function TodayMenu() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-30 h-30 object-cover rounded-md mb-4"
+                                className="w-30 h-30 object-cover rounded-md"
                             />
 
                             {/* Text Content */}
                             <div>
                                 <h3 className="text-xl font-semibold">{item.title}</h3>
-                                <p className="font-semibold mb-2 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">
+                                <p className="font-semibold mt-1.5 mb-2 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">
                                     {item.price}
                                 </p>
                                 <p className="text-sm">{item.description}</p>

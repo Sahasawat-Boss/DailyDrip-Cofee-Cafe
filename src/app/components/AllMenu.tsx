@@ -1,3 +1,5 @@
+import BeanFloat from "@/app/components/deco/BeanFloat";
+
 const allMenuItems = [
     {
         title: "Iced Thai Latte",
@@ -55,9 +57,9 @@ const allMenuItems = [
 
 export default function AllMenu() {
     return (
-        <section className="px-6 pt-10 pb-2">
+        <section className="px-6 pb-2">
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
+                <div className="text-center mb-6">
                     <h2 className="text-2xl md:text-4xl font-bold italic mb-4 float">
                         All Menu
                     </h2>
@@ -65,7 +67,7 @@ export default function AllMenu() {
                         Browse our full range of drinks — from traditional Thai coffee to creative modern blends.
                     </p>
                 </div>
-                <div className="grid px-8 sm:px-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
                     {allMenuItems.map((item, index) => (
                         <div
                             key={index}
@@ -79,17 +81,22 @@ export default function AllMenu() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-30 h-30 object-cover rounded-md mb-4"
+                                className="w-30 h-30 object-cover rounded-md"
                             />
                             <div>
                                 <h3 className="text-xl font-semibold">{item.title}</h3>
-                                <p className="font-semibold mb-2 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">
+                                <p className="font-semibold mb-2 mt-1.5 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">
                                     {item.price}
                                 </p>
                                 <p className="text-sm">{item.description}</p>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Floating bean */}
+                <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
+                    <BeanFloat />
                 </div>
             </div>
         </section>
