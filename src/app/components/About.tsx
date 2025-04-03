@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import BeanFloat from "./deco/BeanFloat";
+import { FaRegClock } from "react-icons/fa";
 
 export default function About() {
     return (
         <section className="px-8 sm:px-12 py-10 md:py-14">
             <div className="max-w-5xl mx-auto relative">
-                <h2 className="text-2xl md:text-4xl font-bold italic mb-4">
-                    DailyDrip
-                </h2>
+                <div className="flex text-2xl md:text-4xl font-bold italic mb-4">
+                    <div>DailyDrip</div>
+                    <div className="ml-1.5 mt-0.5 text-sm text-amber-900/65"><FaRegClock  /></div>
+                </div>
                 <p className="mb-3 leading-relaxed indent-5">
                     Located in the heart of Chiang Mai, DailyDrip is a cozy spot for coffee
                     lovers, creatives, and travelers. We brew with locally sourced beans from

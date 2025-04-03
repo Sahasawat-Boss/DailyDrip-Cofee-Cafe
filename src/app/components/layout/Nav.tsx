@@ -56,14 +56,14 @@ export default function Navbar() {
 
 
                 {/* Menu Items */}
-                <ul className="flex space-x-4 text-sm md:text-base">
+                <ul className="flex space-x-4.5 py-1 text-sm md:text-base">
                     {menuItems.map(({ label, href }) => {
                         const isActive = pathname === href;
                         return (
                             <li key={label} className="relative group">
                                 <Link
                                     href={href}
-                                    className={`transition-colors font-semi ${isActive ? 'text-[#d4a957] font-semibold' : 'hover:text-[#c5b089]'}`}
+                                    className={`transition-colors font-semi opacity-55 ${isActive ? 'text-[#d4a957] opacity-100 font-semibold' : 'hover:text-[#ac9366]'}`}
                                 >
                                     {label}
                                 </Link>

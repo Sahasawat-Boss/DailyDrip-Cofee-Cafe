@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 const reviews = [
     {
@@ -56,6 +57,12 @@ export default function ReviewCard() {
                         </div>
                         <p className="italic font-semibold">— {name}</p>
                     </div>
+                </div>
+
+                <div className="absolute right-0 -bottom-5.5 w-22 h-22 rotate-12 float">
+                    <img src="/gif/hot-coffee.gif" alt="Coffee Gif" className=""/>
+                    <FaHeart className="text-red-400 absolute top-4 -rotate-30 w-5 float"/>
+                    <FaHeart className="text-red-400 absolute top-0 left-3 -rotate-10 w-3 float"/>
                 </div>
 
                 {/* Navigation Buttons */}
