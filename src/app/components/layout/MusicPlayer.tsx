@@ -7,9 +7,8 @@ export default function MusicPlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
-        // Attempt to play after user interaction
         const playOnInteraction = () => {
-            if (audioRef.current && !isPlaying) {
+            if (audioRef.current && audioRef.current.paused) {
                 audioRef.current.play().then(() => {
                     setIsPlaying(true);
                 }).catch((err) => {
@@ -19,30 +18,42 @@ export default function MusicPlayer() {
             window.removeEventListener('click', playOnInteraction);
         };
 
-        // Autoplay may be blocked — wait for user click
         window.addEventListener('click', playOnInteraction);
         return () => window.removeEventListener('click', playOnInteraction);
-    }, [isPlaying]);
+    }, []);
+
+    // Sync UI state with audio events
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (!audio) return;
+
+        const handlePlay = () => setIsPlaying(true);
+        const handlePause = () => setIsPlaying(false);
+
+        audio.addEventListener('play', handlePlay);
+        audio.addEventListener('pause', handlePause);
+
+        return () => {
+            audio.removeEventListener('play', handlePlay);
+            audio.removeEventListener('pause', handlePause);
+        };
+    }, []);
 
     return (
         <>
             <audio ref={audioRef} src="/audio/bg-music.mp3" loop preload="auto" />
-            {/* Optional control button */}
             <button
                 onClick={() => {
-                    if (audioRef.current) {
-                        if (isPlaying) {
-                            audioRef.current.pause();
-                            setIsPlaying(false);
-                        } else {
-                            audioRef.current.play();
-                            setIsPlaying(true);
-                        }
+                    if (!audioRef.current) return;
+                    if (audioRef.current.paused) {
+                        audioRef.current.play();
+                    } else {
+                        audioRef.current.pause();
                     }
                 }}
-                className="fixed bottom-4 left-4 p-2 bg-white text-black rounded shadow z-50"
+                className="fixed top-3 right-3 p-0.5 px-1.5 text-[10px] bg-white text-[#ebbf7d] rounded shadow z-50 hover"
             >
-                {isPlaying ? '⏸ Pause Music' : '▶ Play Music'}
+                {isPlaying ? '⏸' : '▶'}
             </button>
         </>
     );
