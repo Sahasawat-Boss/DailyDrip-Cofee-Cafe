@@ -5,10 +5,10 @@ import { usePathname } from 'next/navigation';
 
 const menuItems = [
     { label: 'Home', href: '/' },
-    { label: 'Menu', href: '/' },
-    { label: 'Gallery', href: '/' },
+    { label: 'Menu', href: '/X' },
+    { label: 'Gallery', href: '/X' },
     { label: 'History', href: '/pages/history' },
-    { label: 'Contact', href: '/' },
+    { label: 'Contact', href: '/X' },
 ];
 
 export default function Navbar() {
@@ -32,21 +32,25 @@ export default function Navbar() {
                 className={`max-w-7xl mx-auto flex flex-col items-center justify-between px-6 transition-all duration-300 ${isShrunk ? 'gap-0' : 'gap-2'
                     }`}
             >
+
                 {/* Logo */}
-                <div
-                    className={`text-xl font-bold transition-all duration-300 ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'
-                        }`}
-                    style={{
-                        filter:
-                            'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))',
-                    }}
-                >
-                    <span className="text-[#fab152]">Daily</span>
-                    <span className="text-white">Drip</span>
-                </div>
+                <Link href="/" className="text-xl font-bold transition-all duration-300 no-underline">
+                    <div
+                        className={`transition-all duration-300 tracking-wide ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'
+                            }`}
+                        style={{
+                            filter:
+                                'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))',
+                        }}
+                    >
+                        <span className="text-[#fab152] ">Daily</span>
+                        <span className="text-white">Drip</span>
+                    </div>
+                </Link>
+
 
                 {/* Menu Items */}
-                <ul className="flex space-x-4 text-sm tracking-wide">
+                <ul className="flex space-x-4 text-sm md:text-base">
                     {menuItems.map(({ label, href }) => {
                         const isActive = pathname === href;
                         return (

@@ -12,7 +12,7 @@ export default function Hero() {
                         style={{
                             filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.05)) drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.6))",
                         }}>
-                        <span className="text-[#fab152]">Daily</span><span className="text-white">Drip</span>
+                        <span className="text-[#fab152] tracking-wide">Daily</span><span className="text-white">Drip</span>
                     </div>
 
 

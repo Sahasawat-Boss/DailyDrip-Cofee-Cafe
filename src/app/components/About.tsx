@@ -4,8 +4,8 @@ export default function About() {
     return (
         <section className="px-8 sm:px-12 py-10 md:py-14">
             <div className="max-w-5xl mx-auto relative">
-                <h2 className="text-3xl md:text-4xl font-bold italic mb-6">
-                    About DailyDrip
+                <h2 className="text-2xl md:text-4xl font-bold italic mb-6">
+                    DailyDrip
                 </h2>
                 <p className="mb-3 leading-relaxed indent-5">
                     Located in the heart of Chiang Mai, DailyDrip is a cozy spot for coffee
