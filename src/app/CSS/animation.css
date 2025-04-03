@@ -1,10 +1,30 @@
 @import "tailwindcss";
 
-/* Tailwind @Apply*/
+/*! Tailwind @Apply =======================================*/
 
-.hover{
+.hover {
     @apply hover:scale-110 opacity-90 cursor-pointer transition duration-200
 }
-.hover-r{
+
+.hover-r {
     @apply hover:translate-x-2.5 opacity-90 cursor-pointer transition duration-200
+}
+
+/*! CSS =====================================================*/
+@keyframes floatScale {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.float {
+    animation: floatScale 4s ease-in-out infinite;
 }

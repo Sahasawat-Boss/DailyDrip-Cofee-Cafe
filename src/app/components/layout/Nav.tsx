@@ -18,8 +18,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-[#111]/80 backdrop-blur-md transition-all duration-300">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-[#111]/70 backdrop-blur-md transition-all duration-300">
+            <div className="max-w-7xl mx-auto flex flex-col gap-2 items-center justify-between px-6 py-2">
                 {/* Logo (hidden when scrolled) */}
                 <div className={`text-white text-3xl font-bold transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}>
                     <span className="text-white">Daily</span><span className="text-red-500">Drip</span>
