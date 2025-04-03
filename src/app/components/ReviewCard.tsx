@@ -36,6 +36,11 @@ export default function ReviewCard() {
     return (
         <section className="px-4 py-16">
             <div className="max-w-2xl px-8 mx-auto relative">
+
+                <h2 className="text-2xl md:text-3xl mb-2 text-center font-bold italic float">
+                    Reviews
+                </h2>
+
                 <div className="relative rounded-md overflow-hidden shadow-lg">
                     <img
                         src={image}
@@ -44,7 +49,7 @@ export default function ReviewCard() {
                     />
                     <div className="absolute inset-0 bg-white/40 p-10 md:p-14 flex flex-col justify-center">
                         <p className="text-lg italic mb-4 max-w-xl">{text}</p>
-                        <div className="flex items-center gap-1 mb-2">
+                        <div className="flex items-center gap-1 mb-2 float">
                             {[...Array(rating)].map((_, i) => (
                                 <FaStar key={i} className="text-yellow-400" />
                             ))}

@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
-body {
-    @apply bg-[#fff] text-[#000000];
+/* Base styles (light mode default) */
+:root {
+    --bg: #ffffff;
+    --text: #000000;
 }
+
+/* Dark mode override */
+[data-theme='dark'] {
+    --bg: #252525;
+    --text: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 html,
 body {

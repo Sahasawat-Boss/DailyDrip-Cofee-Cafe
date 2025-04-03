@@ -7,7 +7,6 @@ import CofeeCup from '../deco/CofeeCup';
 const menuItems = [
     { label: 'Home', href: '/' },
     { label: 'Menu', href: '/X' },
-    { label: 'Gallery', href: '/X' },
     { label: 'History', href: '/pages/history' },
     { label: 'Contact', href: '/X' },
 ];
@@ -26,7 +25,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md transition-all duration-300 ${isShrunk ? 'py-2' : 'py-4'
+            className={`fixed top-0 left-0 w-full z-40 bg-white/10 backdrop-blur-md ${isShrunk ? 'py-2' : 'py-4'
                 }`}
         >
             <div

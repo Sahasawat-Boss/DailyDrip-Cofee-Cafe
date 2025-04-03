@@ -1,10 +1,11 @@
 //http://localhost:3000/pages/history
-
+import ThemeToggle from "@/app/components/layout/DarkToggle";
 import BeanFloat from "@/app/components/deco/BeanFloat";
 
 export default function History() {
   return (
     <section className="px-8 sm:px-12 py-22">
+      <ThemeToggle/>
       <div className="max-w-5xl mx-auto relative">
         <h2 className="text-3xl md:text-4xl font-bold italic mb-6">
           Our History

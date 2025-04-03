@@ -11,6 +11,20 @@
 }
 
 /*! CSS =====================================================*/
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-3.5px) scale(1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+}
 @keyframes floatScale {
     0% {
         transform: translateY(0) scale(1);
@@ -26,9 +40,14 @@
 }
 
 .float {
+    animation: float 3.5s ease-in-out infinite;
+}
+.floatCoffee {
     animation: floatScale 4s ease-in-out infinite;
 }
 
+
+/* =========================================================*/
 @keyframes rotateSlow {
     0% {
         transform: rotate(0deg);

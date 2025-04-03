@@ -32,10 +32,10 @@ const menuItems = [
 
 export default function TodayMenu() {
     return (
-        <section className=" px-6 py-16">
+        <section className=" px-6 pt-14 pb-2">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold italic mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold italic mb-4 float">
                         Today's Menu
                     </h2>
                     <p className="max-w-xl mx-auto">
