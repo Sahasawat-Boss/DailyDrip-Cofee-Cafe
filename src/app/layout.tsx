@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./CSS/globals.css";
 import "./CSS/animation.css";
 import Navbar from "./components/layout/Nav";
+import Footer from "./components/layout/Footer";
+import MusicPlayer from "./components/layout/MusicPlayer";
 
 import { Quicksand } from 'next/font/google';
 
@@ -27,6 +29,8 @@ export default function RootLayout({
       <body className={`${quicksand.className} antialiased`}>
         <Navbar />
         {children}
+        <Footer/>
+        <MusicPlayer/>
       </body>
     </html>
   );
