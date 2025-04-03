@@ -1,3 +1,4 @@
+import Navbar from "./components/layout/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import TodayMenu from "./components/TodayMenu";
@@ -7,6 +8,7 @@ import Footer from "./components/layout/Footer";
 export default function Home() {
   return (
     <div>
+      <Navbar/>
       <Hero />
       <About />
       <TodayMenu />
