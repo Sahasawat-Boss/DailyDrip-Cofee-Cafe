@@ -12,14 +12,14 @@ export default function Hero() {
                         DailyDrip
                     </h1>
                     {/* == Cofee Bean SV ============================ */}
-                    <div className="absolute top-0 -left-8 -rotate-90 float">
+                    <div className="absolute top-0 -left-8 -rotate-70 float">
                         <img src="/svg/coffee-beans2.png" alt="coffee png" className="w-6 h-6" />
                     </div>
-                    <div className="absolute top-6 -left-4 -rotate-90 float">
+                    <div className="absolute top-8 -left-2.5 -rotate-100 float">
                         <img src="/svg/coffee-beans2.png" alt="coffee png" className="w-4 h-4" />
                     </div>
-                    <div className="absolute buttom-0 -right-8 rotate-90 float">
-                        <img src="/svg/coffee-beans2.png" alt="coffee png" className="w-6 h-6" />
+                    <div className="absolute buttom-0 -right-8 rotate-70 float">
+                        <img src="/svg/coffee-beans1.png" alt="coffee png" className="w-8 h-8" />
                     </div>
                     {/* == Cofee Bean SVG ============================ */}
                 </div>
@@ -27,7 +27,7 @@ export default function Hero() {
                     Coffee Cafe  <em>in</em> CNX
                 </h1>
 
-                <p className="flex text-lg italic mt-6 ">
+                <div className="flex text-lg italic mt-6 ">
                     Brought to you by
                     <div className="hover-r ml-1.5">
                         <a
@@ -39,7 +39,7 @@ export default function Hero() {
                             BossBsynth
                         </a>
                     </div>
-                </p>
+                </div>
 
             </div>
         </section>
