@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import CofeeCup from '../deco/CofeeCup';
 
 const menuItems = [
     { label: 'Home', href: '/' },
@@ -32,21 +33,27 @@ export default function Navbar() {
                 className={`max-w-7xl mx-auto flex flex-col items-center justify-between px-6 transition-all duration-300 ${isShrunk ? 'gap-0' : 'gap-2'
                     }`}
             >
-
                 {/* Logo */}
                 <Link href="/" className="text-xl font-bold transition-all duration-300 no-underline">
                     <div
-                        className={`transition-all duration-300 tracking-wide ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'
-                            }`}
+                        className={`transition-all duration-300 tracking-wide ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'}`}
                         style={{
-                            filter:
-                                'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))',
+                            filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))',
                         }}
                     >
-                        <span className="text-[#fab152] ">Daily</span>
-                        <span className="text-white">Drip</span>
+                        <div className="relative inline-block">
+                            {/* Coffee Cup Icon */}
+                            <div className="absolute -top-3 -right-9 scale-35 opacity-80 rotate-20">
+                                <CofeeCup />
+                            </div>
+
+                            {/* Logo Text */}
+                            <span className="text-[#fab152]">Daily</span>
+                            <span className="text-white">Drip</span>
+                        </div>
                     </div>
                 </Link>
+
 
 
                 {/* Menu Items */}

@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className="relative h-[55vh] md:h-[65vh] flex items-center justify-center">
+        <section className="relative h-[65vh] md:h-[70vh] flex items-center justify-center">
             <div
                 className="absolute inset-0 bg-cover bg-center z-0 blur-xs" //[inset-0] = (t-0 r-0 l-0 b-0) = stretch and fill its entire parent.
                 style={{ backgroundImage: "url('/images/hero/cafe2.jpeg')" }}

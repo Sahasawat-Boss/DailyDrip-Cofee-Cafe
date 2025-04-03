@@ -25,7 +25,7 @@ export default function About() {
                     />
                 </div>
 
-                <div className="absolute -bottom-12 -right-4 md:-right-14 opacity-70">
+                <div className="absolute -bottom-16 -right-4 opacity-70 rotate-slow">
                     <BeanFloat />
                 </div>
 

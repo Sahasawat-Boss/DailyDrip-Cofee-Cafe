@@ -43,7 +43,7 @@ export default function TodayMenu() {
                         with beans sourced from local farms in Northern Thailand.
                     </p>
                 </div>
-                <div className="grid px-8 sm:px-3 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid px-8 sm:px-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
                     {menuItems.map((item, index) => (
                         <div
                             key={index}
