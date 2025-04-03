@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Tailwind @Apply*/
+
+.hover{
+    @apply hover:scale-105 opacity-90 cursor-pointer transition duration-200
+}
+.hover-r{
+    @apply hover:translate-x-2.5 opacity-90 cursor-pointer transition duration-200
+}
