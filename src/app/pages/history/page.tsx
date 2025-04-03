@@ -1,4 +1,5 @@
 //http://localhost:3000/pages/history
+import ParallaxImage from "@/app/components/deco/Parallax";
 import BeanFloat from "@/app/components/deco/BeanFloat";
 import { CiCoffeeBean } from "react-icons/ci";
 
@@ -27,6 +28,7 @@ export default function History() {
             className="h-65 w-65 object-cover rounded-md shadow-lg mx-auto"
           />
         </div>
+
 
         <p className="mb-4 mt-4 leading-relaxed indent-5">
           Over the years, our little corner grew into a space where locals and travelers gather,

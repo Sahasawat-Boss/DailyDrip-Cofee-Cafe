@@ -1,3 +1,4 @@
+import ParallaxImage from './deco/Parallax';
 import Link from 'next/link';
 import BeanFloat from "./deco/BeanFloat";
 import { FaRegClock } from "react-icons/fa";
@@ -16,15 +17,15 @@ export default function About() {
                     Northern Thailand, roasted fresh in small batches.
                 </p>
 
-                <Link href="/pages/history" className="inline-block border px-6 py-2 mb-4 uppercase tracking-wide hover-r">
+                <Link href="/pages/history" className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide hover-r">
                     Our History
                 </Link>
 
-                <div>
-                    <img
-                        src="/images/gal/about1.jpg"
-                        alt="Cafe interior"
-                        className="h-50 w-full md:h-80 object-cover rounded-md shadow-lg"
+                <div className="my-1">
+                    <ParallaxImage
+                        imageUrl="/images/pallalax/pallalax2.jpg"
+                        overlayText="One Cup, Infinite Stories."
+                        height="h-[35vh]"
                     />
                 </div>
 

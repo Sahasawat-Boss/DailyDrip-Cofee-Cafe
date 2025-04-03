@@ -1,3 +1,4 @@
+import ParallaxImage from "@/app/components/deco/Parallax";
 import BeanFloat from "@/app/components/deco/BeanFloat";
 import { MdOutlineContactSupport } from "react-icons/md";
 
@@ -6,7 +7,7 @@ export default function Contact() {
         <section className="px-8 sm:px-12 pt-26 pb-12">
             <div className="max-w-4xl mx-auto relative">
                 {/* Title */}
-                <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-8 float">
+                <div className="flex justify-center text-2xl md:text-4xl font-bold italic float">
                     <div className="relative">
                         Contact
                         <div className="absolute top-0.5 -right-5 text-base text-amber-600/50 rotate-10">
@@ -65,6 +66,14 @@ export default function Contact() {
                 {/* Floating bean */}
                 <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
                     <BeanFloat />
+                </div>
+
+                <div className="my-8">
+                    <ParallaxImage
+                        imageUrl="/images/hero/cafe2.jpeg"
+                        overlayText="See you later."
+                        height="h-[50vh]"
+                    />
                 </div>
             </div>
         </section>
