@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-white/30 z-0" />
             <div className="relative z-10 text-center px-4 max-w-3xl">
                 <div>
-                    <div className='text-3xl font-bold transition-opacity duration-300 float'
+                    <div className='text-4xl  md:text-5xl font-bold transition-opacity duration-300 float'
                         style={{
                             filter: "drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.05)) drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.6))",
                         }}>

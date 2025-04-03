@@ -6,19 +6,19 @@ const reviews = [
     {
         name: "Jane Smith",
         text: `“ DailyDrip serves not just amazing coffee, but a whole vibe. The espresso was bold and smooth, and the space is perfect for working or chilling out. ”`,
-        image: '/images/reviews/review1.jpeg',
+        image: '/images/reviews/review4.jpg',
         rating: 5,
     },
     {
         name: "Alex Tan",
         text: `“ I loved the iced Thai latte and how friendly the staff were! Will definitely come back next time I’m in Chiang Mai. ”`,
-        image: "/images/reviews/review2.jpeg",
+        image: "/images/reviews/review3.jpg",
         rating: 4,
     },
     {
         name: "Mira Patel",
         text: `“ Cozy atmosphere, local coffee beans, and the Dirty Matcha is next level. Highly recommended for digital nomads! ”`,
-        image: "/images/reviews/review1.jpeg",
+        image: "/images/reviews/review2.jpeg",
         rating: 5,
     },
 ];
@@ -45,16 +45,16 @@ export default function ReviewCard() {
                     <img
                         src={image}
                         alt={name}
-                        className="w-full h-[450px] object-cover"
+                        className="w-full h-[350px] object-cover"
                     />
-                    <div className="absolute inset-0 bg-white/40 p-10 md:p-14 flex flex-col justify-center">
-                        <p className="text-lg italic mb-4 max-w-xl">{text}</p>
+                    <div className="absolute inset-0 bg-white/60 p-10 md:p-14 flex flex-col justify-center">
+                        <p className="text-lg italic font-semibold mb-4 max-w-xl">{text}</p>
                         <div className="flex items-center gap-1 mb-2 float">
                             {[...Array(rating)].map((_, i) => (
                                 <FaStar key={i} className="text-yellow-400" />
                             ))}
                         </div>
-                        <p className="text-gray-300 italic">— {name}</p>
+                        <p className="italic font-semibold">— {name}</p>
                     </div>
                 </div>
 

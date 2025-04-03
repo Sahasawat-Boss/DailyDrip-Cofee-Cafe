@@ -30,17 +30,17 @@ export default function Footer() {
             <div className="mt-6 border-t border-gray-700 pt-6 text-center text-xs">
                 <div>
                     © 2025 DailyDrip. All Rights Reserved. Designed by{" "}
-                    <a href="https://bossbsynth.com" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:underline">BossBsynth</a>{" "}
+                    <a href="https://bossbsynth.com" target="_blank" rel="noopener noreferrer" className="text-[#da953c] hover:underline">BossBsynth</a>{" "}
                     <div>
                         Demo Images: 
-                        <a href="https://unsplash.com" className="text-red-500 hover:underline" target="_blank" rel="noopener noreferrer"> Unsplash </a>
+                        <a href="https://unsplash.com" className="text-[#da953c] hover:underline" target="_blank" rel="noopener noreferrer"> Unsplash </a>
                         and
-                        <a href="https://www.pexels.com/photo/capturing-coffee-moment-with-smartphone-29074308/" className="text-red-500 hover:underline" target="_blank" rel="noopener noreferrer"> pexels </a>
+                        <a href="https://www.pexels.com/photo/capturing-coffee-moment-with-smartphone-29074308/" className="text-[#da953c] hover:underline" target="_blank" rel="noopener noreferrer"> pexels </a>
                     </div>
                 </div>
 
                 {/* Social Icons */}
-                <div className="flex justify-center mt-4 gap-5 text-red-500 text-lg">
+                <div className="flex justify-center mt-4 gap-5 text-[#da953c] text-lg">
 
                     <a href="#"><FaFacebookF /></a>
                 </div>

@@ -1,24 +1,10 @@
 const menuItems = [
     {
-        title: "Classic Espresso",
-        price: "45 Bath",
-        image: "/images/menu/menu3.jpeg",
-        description:
-            "Bold Northern Thai espresso — rich and energizing.",
-    },
-    {
         title: "Iced Thai Latte",
         price: "40 Bath",
         image: "/images/menu/menu5.jpg",
         description:
             "Chilled Thai coffee with creamy sweetness.",
-    },
-    {
-        title: "Drip Brew (Pour Over)",
-        price: "40 Bath",
-        image: "/images/menu/menu7.jpg",
-        description:
-            "Smooth pour-over from Chiang Mai’s finest beans.",
     },
     {
         title: "Cofee Matcha",
@@ -27,6 +13,21 @@ const menuItems = [
         description:
             "Matcha and espresso blend — earthy and bold.",
     },
+    {
+        title: "Classic Espresso",
+        price: "45 Bath",
+        image: "/images/menu/menu3.jpeg",
+        description:
+            "Bold Northern Thai espresso — rich and energizing.",
+    },
+    {
+        title: "Drip Brew (Pour Over)",
+        price: "40 Bath",
+        image: "/images/menu/menu7.jpg",
+        description:
+            "Smooth pour-over from Chiang Mai’s finest beans.",
+    },
+
 ];
 
 
@@ -35,7 +36,7 @@ export default function TodayMenu() {
         <section className=" px-6 pt-14 pb-2">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold italic mb-4 float">
+                    <h2 className="text-2xl md:text-4xl font-bold italic mb-4 float">
                         Today's Menu
                     </h2>
                     <p className="max-w-xl mx-auto">
@@ -56,7 +57,7 @@ export default function TodayMenu() {
                             />
                             <div>
                                 <h3 className="text-xl font-semibold">{item.title}</h3>
-                                <p className="text-yellow-400 text-lg font-bold mb-2">{item.price}</p>
+                                <p className="font-semibold mb-2 bg-black/12 w-fit rounded-2xl px-3 shadow-2xl">{item.price}</p>
                                 <p className="text-sm">{item.description}</p>
                             </div>
                         </div>

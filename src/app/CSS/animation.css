@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/*! Tailwind @Apply =======================================*/
+/*** Tailwind @Apply =======================================*/
 
 .hover {
     @apply hover:scale-110 opacity-90 cursor-pointer transition duration-200
@@ -10,7 +10,70 @@
     @apply hover:translate-x-2.5 opacity-90 cursor-pointer transition duration-200
 }
 
-/*! CSS =====================================================*/
+/*! CSS ---------------------------------------------------------- */
+/*** CSS Fade =====================================================*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out both;
+}
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.6s ease-out both;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.6s ease-out both;
+}
+
+
+/*** CSS Float =====================================================*/
 @keyframes float {
     0% {
         transform: translateY(0) scale(1);
@@ -25,6 +88,7 @@
     }
 
 }
+
 @keyframes floatScale {
     0% {
         transform: translateY(0) scale(1);
@@ -42,12 +106,13 @@
 .float {
     animation: float 3.5s ease-in-out infinite;
 }
+
 .floatCoffee {
     animation: floatScale 4s ease-in-out infinite;
 }
 
 
-/* =========================================================*/
+/*! CSS Rotate =====================================================*/
 @keyframes rotateSlow {
     0% {
         transform: rotate(0deg);
