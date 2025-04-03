@@ -67,7 +67,7 @@ export default function AllMenu() {
                         Browse our full range of drinks — from traditional Thai coffee to creative modern blends.
                     </p>
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
                     {allMenuItems.map((item, index) => (
                         <div
                             key={index}
