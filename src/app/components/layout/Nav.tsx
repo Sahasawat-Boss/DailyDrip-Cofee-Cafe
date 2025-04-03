@@ -3,43 +3,69 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const menuItems = ['Home', 'Menu', 'Gallery', 'Reservation', 'About', 'Contact'];
+const menuItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Menu', href: '/' },
+    { label: 'Gallery', href: '/' },
+    { label: 'History', href: '/pages/history' },
+    { label: 'Contact', href: '/' },
+];
 
 export default function Navbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isShrunk, setIsShrunk] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50); // hide logo after scrolling 50px
+            setIsShrunk(window.scrollY > 50);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-[#111]/70 backdrop-blur-md transition-all duration-300">
-            <div className="max-w-7xl mx-auto flex flex-col gap-2 items-center justify-between px-6 py-2">
-                {/* Logo (hidden when scrolled) */}
-                <div className={`text-white text-3xl font-bold transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}>
-                    <span className="text-white">Daily</span><span className="text-red-500">Drip</span>
+        <nav
+            className={`fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md transition-all duration-300 ${isShrunk ? 'py-2' : 'py-4'
+                }`}
+        >
+            <div
+                className={`max-w-7xl mx-auto flex flex-col items-center justify-between px-6 transition-all duration-300 ${isShrunk ? 'gap-0' : 'gap-2'
+                    }`}
+            >
+                {/* Logo */}
+                <div
+                    className={`text-xl font-bold transition-all duration-300 ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'
+                        }`}
+                    style={{
+                        filter:
+                            'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))',
+                    }}
+                >
+                    <span className="text-[#fab152]">Daily</span>
+                    <span className="text-white">Drip</span>
                 </div>
 
                 {/* Menu Items */}
-                <ul className="flex space-x-6 text-sm text-white tracking-wide">
-                    {menuItems.map((item) => {
-                        const href = `#${item.toLowerCase()}`;
+                <ul className="flex space-x-4 text-sm tracking-wide">
+                    {menuItems.map(({ label, href }) => {
                         const isActive = pathname === href;
                         return (
-                            <li key={item} className="relative group">
-                                <Link href={href} className="hover:text-red-500 transition-colors">
-                                    {item}
+                            <li key={label} className="relative group">
+                                <Link
+                                    href={href}
+                                    className={`transition-colors ${isActive ? 'text-yellow-600' : 'hover:text-yellow-600'}`}
+                                >
+                                    {label}
                                 </Link>
-                                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-500 transition-all group-hover:w-full"></span>
+                                <span
+                                    className={`absolute left-0 -bottom-1 h-[2px] bg-yellow-600 transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                        }`}
+                                ></span>
                             </li>
                         );
                     })}
                 </ul>
+
             </div>
         </nav>
     );

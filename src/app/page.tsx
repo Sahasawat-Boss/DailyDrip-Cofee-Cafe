@@ -1,4 +1,5 @@
-import Navbar from "./components/layout/Nav";
+//http://localhost:3000/
+
 import Hero from "./components/Hero";
 import About from "./components/About";
 import TodayMenu from "./components/TodayMenu";
@@ -8,12 +9,11 @@ import Footer from "./components/layout/Footer";
 export default function Home() {
   return (
     <div>
-      <Navbar/>
       <Hero />
       <About />
       <TodayMenu />
       <ReviewCard />
-      <Footer/>
-    </div>
+      <Footer />
+    </div> 
   );
 }
