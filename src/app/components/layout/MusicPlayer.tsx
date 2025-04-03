@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { FaMusic } from "react-icons/fa";
 
 export default function MusicPlayer() {
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -45,15 +46,12 @@ export default function MusicPlayer() {
             <button
                 onClick={() => {
                     if (!audioRef.current) return;
-                    if (audioRef.current.paused) {
-                        audioRef.current.play();
-                    } else {
-                        audioRef.current.pause();
-                    }
+                    audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause();
                 }}
-                className="fixed top-3 right-3 p-0.5 px-1.5 text-[10px] bg-white text-[#ebbf7d] rounded shadow z-50 hover"
+                className="fixed top-3 right-3 p-1 bg-white text-[#d6aa68] rounded-full shadow z-50 hover no-focus"
+                aria-label={isPlaying ? "Pause Music" : "Play Music"}
             >
-                {isPlaying ? '⏸' : '▶'}
+                <FaMusic className={isPlaying ? '' : 'opacity-45'} />
             </button>
         </>
     );

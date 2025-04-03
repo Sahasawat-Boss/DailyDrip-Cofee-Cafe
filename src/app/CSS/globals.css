@@ -23,3 +23,8 @@ html,
 body {
     overflow-x: hidden;
 }
+
+/*== Tailwind ============================ */
+.no-focus{
+    @apply focus:outline-none focus:ring-0 focus:border-none
+}
