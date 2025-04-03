@@ -7,22 +7,24 @@ export default function Hero() {
             />
             <div className="absolute inset-0 bg-black/55 z-0" />
             <div className="relative z-10 text-white text-center px-4 max-w-3xl">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 hover-r">
                     DailyDrip
                 </h1>
-                <h1 className="text-lg md:text-xl font-bold leading-tight mb-4">
+                <h1 className="opacity-80 text-lg md:text-xl font-bold leading-tight mb-4">
                     Coffee Cafe  <em>in</em> CNX
                 </h1>
-                <p className="text-lg italic mt-6 hover">
-                    Brought to you by{" "}
-                    <a
-                        href="https://bossbsynth.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-pink-300/90 underline hover:text-pink-200 transition-colors duration-200 "
-                    >
-                        BossBsynth
-                    </a>
+                <p className="flex text-lg italic mt-6 ">
+                    Brought to you by
+                    <div className="hover-r ml-1.5">
+                        <a
+                            href="https://bossbsynth.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-red-400 underline hover:text-red-300 transition-colors duration-200"
+                        >
+                            BossBsynth
+                        </a>
+                    </div>
                 </p>
 
             </div>

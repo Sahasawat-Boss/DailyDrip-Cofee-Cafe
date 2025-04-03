@@ -2,7 +2,7 @@
 
 export default function About() {
     return (
-        <section className="bg-[#1a1a1a] text-white px-6 py-12 md:py-20">
+        <section className="text-white px-6 py-12 md:py-20">
             <div className="max-w-5xl mx-auto">
                 <div className="mb-8">
                     <img

@@ -33,7 +33,7 @@ const menuItems = [
 
 export default function TodayMenu() {
     return (
-        <section className="bg-[#1a1a1a] text-white px-6 py-16">
+        <section className="text-white px-6 py-16">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold italic mb-4">
@@ -48,7 +48,7 @@ export default function TodayMenu() {
                     {menuItems.map((item, index) => (
                         <div
                             key={index}
-                            className="flex gap-4 lg:flex-col p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover"
+                            className="flex gap-4 lg:flex-col p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-r"
                         >
                             <img
                                 src={item.image}
