@@ -34,7 +34,7 @@ export default function ReviewCard() {
     const { name, text, image, rating } = reviews[current];
 
     return (
-        <section className="px-4 py-16 text-white">
+        <section className="px-4 py-16">
             <div className="max-w-2xl px-8 mx-auto relative">
                 <div className="relative rounded-md overflow-hidden shadow-lg">
                     <img
@@ -42,7 +42,7 @@ export default function ReviewCard() {
                         alt={name}
                         className="w-full h-[450px] object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/70 p-8 flex flex-col justify-center">
+                    <div className="absolute inset-0 bg-white/40 p-10 md:p-14 flex flex-col justify-center">
                         <p className="text-lg italic mb-4 max-w-xl">{text}</p>
                         <div className="flex items-center gap-1 mb-2">
                             {[...Array(rating)].map((_, i) => (
