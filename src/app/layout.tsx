@@ -16,8 +16,8 @@ const quicksand = Quicksand({
 
 
 export const metadata: Metadata = {
-  title: "DailyDrip | Cofee Cafe",
-  description: "DailyDrip | Cofee Cafe Landing Page",
+  title: "DailyDrip | Coffee Cafe",
+  description: "Coffee Cafe Landing Page by BossBsynth",
 };
 
 export default function RootLayout({
