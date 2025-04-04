@@ -5,7 +5,7 @@ import { FaHourglassStart } from "react-icons/fa";
 
 export default function History() {
   return (
-    <section className="px-8 sm:px-12 pt-26 pb-12">
+    <section className="px-8 sm:px-12 pt-26 pb-12 relative">
       <div className="max-w-2xl mx-auto relative">
         <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
           <div className="relative fade-up2">
@@ -33,9 +33,6 @@ export default function History() {
             Over the years, our little corner grew into a space where locals and travelers gather,
             relax, and enjoy the artistry of coffee. Today, DailyDrip continues to blend tradition
             with creativity — one cup at a time.
-            <div className='absolute opacity-80 -top-20 fade-left2'>
-              <BeanFloatAround />
-            </div>
           </div>
 
           <div>
@@ -64,6 +61,9 @@ export default function History() {
         <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
           <BeanFloat />
         </div>
+      </div>
+      <div className='absolute opacity-80 top-72 fade-left2 '>
+        <BeanFloatAround />
       </div>
     </section>
   );
