@@ -35,7 +35,7 @@ export default function ReviewCard() {
     const { name, text, image, rating } = reviews[current];
 
     return (
-        <section className="px-4 py-16">
+        <section className="px-4 py-10">
             <div className="max-w-2xl px-8 mx-auto relative">
 
                 <h2 className="text-2xl md:text-3xl mb-2 text-center font-bold italic float">
@@ -68,13 +68,13 @@ export default function ReviewCard() {
                 {/* Navigation Buttons */}
                 <button
                     onClick={prev}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover"
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover no-focus active:scale-70"
                 >
                     <FaChevronLeft />
                 </button>
                 <button
                     onClick={next}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover"
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover no-focus active:scale-70"
                 >
                     <FaChevronRight />
                 </button>

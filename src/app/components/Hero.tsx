@@ -20,7 +20,7 @@ export default function Hero() {
 
                     {/* == Cofee Bean SV ============================ */}
                     {/* Coffee Cup Icon */}
-                    <div className="absolute top-3 -right-9 opacity-85 rotate-25 float drop-shadow-lg drop-shadow-black/35">
+                    <div className="absolute top-3 -right-9 opacity-85 rotate-25 drop-shadow-lg drop-shadow-black/35 scale">
                         <CofeeCup />
                     </div>
                     <div className="absolute top-4 -left-8 -rotate-70 floatCoffee">

@@ -74,7 +74,7 @@ export default function AllMenu() {
                             className="relative flex gap-4 lg:flex-col p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 hover-r"
                         >
                             {item.tag && (
-                                <span className="absolute top-1 -left-4 bg-yellow-300/85 text-black text-[11px] font-semibold px-2 py-0.5 rounded shadow-md z-10">
+                                <span className="absolute top-1 -left-4 bg-yellow-300/85 text-black text-[11px] font-semibold px-1.5 py-0.5 rounded shadow-md z-10 float">
                                     {item.tag}
                                 </span>
                             )}

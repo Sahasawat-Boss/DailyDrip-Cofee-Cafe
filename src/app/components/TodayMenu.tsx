@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const menuItems = [
     {
         title: "Iced Thai Latte",
@@ -49,7 +51,7 @@ export default function TodayMenu() {
                         >
                             {/* Tag Badge */}
                             {item.tag && (
-                                <span className="absolute top-1 -left-4 bg-yellow-300/85 text-black text-[11px] font-semibold px-2 py-0.5 rounded shadow-md z-10">
+                                <span className="absolute top-1 -left-4 bg-yellow-300/85 text-black text-[11px] font-semibold px-1.5 py-0.5 rounded shadow-md z-10 float">
                                     {item.tag}
                                 </span>
                             )}
@@ -70,8 +72,14 @@ export default function TodayMenu() {
                                 <p className="text-sm">{item.description}</p>
                             </div>
                         </div>
-
                     ))}
+
+                    <div className="flex justify-center items-center mt-4">
+                        <Link href="/pages/menu" className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
+                            shadow-lg hover-r active:scale-70 rounded">
+                            View Menu
+                        </Link>
+                    </div>
                 </div>
 
             </div>

@@ -33,7 +33,7 @@ export default function Navbar() {
                     }`}
             >
                 {/* Logo */}
-                <Link href="/" className="text-xl font-bold transition-all duration-300 no-underline">
+                <Link href="/" className="text-xl font-bold transition-all duration-300 no-underline active:scale-70">
                     <div
                         className={`transition-all duration-300 tracking-wide ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'}`}
                         style={{
@@ -46,7 +46,7 @@ export default function Navbar() {
                                 <CofeeCup />
                             </div>
 
-                            {/* Logo Text */}
+
                             <span className="text-[#fab152]">Daily</span>
                             <span className="text-white">Drip</span>
                         </div>
@@ -61,12 +61,16 @@ export default function Navbar() {
                         const isActive = pathname === href;
                         return (
                             <li key={label} className="relative group">
+
+                                {/* Pages link*/}
                                 <Link
                                     href={href}
                                     className={`transition-colors font-semi opacity-55 ${isActive ? 'text-[#d4a957] opacity-100 font-semibold' : 'hover:text-[#ac9366]'}`}
                                 >
                                     {label}
                                 </Link>
+
+                                {/* Undeline */}
                                 <span
                                     className={`absolute left-0 -bottom-1 h-[2px] bg-[#d4a957] transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
                                         }`}

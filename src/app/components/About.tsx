@@ -9,7 +9,7 @@ export default function About() {
             <div className="max-w-5xl mx-auto relative">
                 <div className="flex text-2xl md:text-4xl font-bold italic mb-4">
                     <div>DailyDrip</div>
-                    <div className="ml-1.5 mt-0.5 text-sm text-amber-900/65"><FaRegClock  /></div>
+                    <div className="ml-1.5 mt-0.5 text-sm text-amber-900/65"><FaRegClock /></div>
                 </div>
                 <p className="mb-3 leading-relaxed indent-5">
                     Located in the heart of Chiang Mai, DailyDrip is a cozy spot for coffee
@@ -17,9 +17,14 @@ export default function About() {
                     Northern Thailand, roasted fresh in small batches.
                 </p>
 
-                <Link href="/pages/history" className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide hover-r">
+                <Link
+                    href="/pages/history"
+                    className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
+                            shadow-lg hover-r active:scale-70 rounded"
+                >
                     Our History
                 </Link>
+
 
                 <div className="my-1">
                     <ParallaxImage
