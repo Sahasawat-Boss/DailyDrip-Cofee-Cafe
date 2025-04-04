@@ -4,6 +4,7 @@ import "./CSS/animation.css";
 import Navbar from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 import MusicPlayer from "./components/layout/MusicPlayer";
+import ScrollToTopButton from "./components/layout/ScrollToTop ";
 
 import { Quicksand } from 'next/font/google';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         <MusicPlayer/>
+        <ScrollToTopButton/>
       </body>
     </html>
   );

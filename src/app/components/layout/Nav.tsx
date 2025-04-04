@@ -65,14 +65,14 @@ export default function Navbar() {
                                 {/* Pages link*/}
                                 <Link
                                     href={href}
-                                    className={`transition-colors font-semi opacity-55 ${isActive ? 'text-[#d4a957] opacity-100 font-semibold' : 'hover:text-[#ac9366]'}`}
+                                    className={`transition-colors font-semi opacity-45 ${isActive ? 'text-[#d4a957] opacity-100 font-semibold' : 'hover:text-[#d4a957]'}`}
                                 >
                                     {label}
                                 </Link>
 
                                 {/* Undeline */}
                                 <span
-                                    className={`absolute left-0 -bottom-1 h-[2px] bg-[#d4a957] transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                    className={`absolute left-0 -bottom-0.5 h-[1.5px] bg-[#d4a957] transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
                                         }`}
                                 ></span>
                             </li>

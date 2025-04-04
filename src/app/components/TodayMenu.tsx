@@ -73,15 +73,14 @@ export default function TodayMenu() {
                             </div>
                         </div>
                     ))}
-
-                    <div className="flex justify-center items-center mt-4">
-                        <Link href="/pages/menu" className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
-                            shadow-lg hover-r active:scale-70 rounded">
-                            View Menu
-                        </Link>
-                    </div>
                 </div>
 
+                <div className="flex justify-center items-center mt-6">
+                    <Link href="/pages/menu" className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
+                            shadow-lg hover-r active:scale-70 rounded">
+                        View Menu
+                    </Link>
+                </div>
             </div>
         </section>
     );
