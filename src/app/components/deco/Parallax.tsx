@@ -40,17 +40,24 @@ export default function ParallaxImage({
     return (
         <div
             ref={imageRef}
-            className={`relative ${height} bg-cover bg-center ${isMobile ? 'bg-scroll' : 'bg-fixed'
-                }`}
+            className={`relative ${height} bg-cover bg-center ${isMobile ? 'bg-scroll' : 'bg-fixed'}`}
             style={{ backgroundImage: `url(${imageUrl})` }}
         >
+            {/* Blur Layer */}
+            <div
+                className="absolute inset-0 backdrop-blur-[2px] bg-white/40"
+                aria-hidden="true"
+            />
+
+            {/* Overlay Text */}
             {overlayText && (
-                <div className="absolute inset-0 bg-black/45 flex items-center justify-center">
-                    <h2 className="text-white text-xl md:text-2xl drop-shadow-xl text-center px-4 tracking-wider italic">
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <h2 className="text-black font-semibold text-xl md:text-2xl drop-shadow-xl text-center px-4 tracking-wider italic">
                         {overlayText}
                     </h2>
                 </div>
             )}
         </div>
+
     );
 }

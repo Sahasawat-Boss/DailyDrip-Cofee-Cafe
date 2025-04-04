@@ -40,13 +40,13 @@ export default function TodayMenu() {
             <div className="max-w-6xl mx-auto">
                 {/* Section Heading */}
                 <motion.div
-                    className="text-center mb-12"
+                    className="text-center mb-6"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: false, amount: 0.3 }}
                 >
-                    <h2 className="text-2xl md:text-4xl font-bold italic mb-4 float">
+                    <h2 className="text-2xl md:text-4xl font-bold italic mb-3 float">
                         Today's Menu
                     </h2>
                     <p className="max-w-xl mx-auto">

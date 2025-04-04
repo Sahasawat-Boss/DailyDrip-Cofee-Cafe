@@ -7,10 +7,10 @@ export default function Hero() {
     return (
         <section className="relative h-[65vh] md:h-[70vh] flex items-center justify-center">
             <div
-                className="absolute inset-0 bg-cover bg-center z-0 blur-xs" //[inset-0] = (t-0 r-0 l-0 b-0) = stretch and fill its entire parent.
+                className="absolute inset-0 bg-cover bg-center z-0 blur-[3px]" //[inset-0] = (t-0 r-0 l-0 b-0) = stretch and fill its entire parent.
                 style={{ backgroundImage: "url('/images/hero/hero.jpg')" }}
             />
-            <div className="absolute inset-0 bg-white/70 z-0" />
+            <div className="absolute inset-0 bg-white/75 z-0" />
 
 
             {/* Animated content */}
@@ -65,18 +65,18 @@ export default function Hero() {
 
                 {/* Footer link */}
                 <motion.div
-                    className="absolute mt-14 flex w-full text-sm italic justify-center"
+                    className="absolute mt-18 flex w-full text-sm italic justify-center"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    <div>Brought to you by</div>
-                    <div className="hover-r ml-1">
+                    <div className=' opacity-40'>Brought to you by</div>
+                    <div className="hover-r ml-1 opacity-60">
                         <a
                             href="https://bossbsynth.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-red-400 underline hover:text-red-300 transition-colors duration-200"
+                            className="text-[#fab152] underline hover:text-[#9cb5d1] transition-colors duration-200"
                         >
                             BossBsynth
                         </a>

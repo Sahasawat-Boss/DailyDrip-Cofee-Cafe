@@ -74,8 +74,8 @@ export default function Contact() {
                 <div className="my-8">
                     <ParallaxImage
                         imageUrl="/images/hero/cafe2.jpeg"
-                        overlayText="See you later."
-                        height="h-[50vh]"
+                        overlayText="Brewed with Heart."
+                        height="h-[60vh]"
                     />
                 </div>
             </div>

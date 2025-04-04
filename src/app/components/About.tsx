@@ -9,7 +9,7 @@ import { FaRegClock, FaHeart } from "react-icons/fa";
 export default function About() {
     return (
         <section className="px-8 sm:px-12 py-10 md:py-14">
-            <div className="max-w-5xl mx-auto relative">
+            <div className="max-w-3xl mx-auto relative">
                 <div className="flex text-2xl md:text-4xl font-bold italic mb-4 fade-right2">
                     <div>DailyDrip</div>
                     <div className="ml-1.5 mt-0.5 text-sm text-amber-900/65"><FaRegClock /></div>
@@ -27,7 +27,7 @@ export default function About() {
                     </p>
                     <Link
                         href="/pages/history"
-                        className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
+                        className="inline-block border px-6 py-2 mb-6 uppercase tracking-wide bg-white text-black 
                             shadow-lg hover-r active:scale-70 rounded"
                     >
                         Our History
@@ -46,9 +46,11 @@ export default function About() {
                 <div className="absolute -bottom-16 -right-4 opacity-70 rotate-slow">
                     <BeanFloat />
                 </div>
-                <div className="absolute -bottom-7 -left-10 rotate-35 scale-125">
-                    <CoffeeCup />
-                    <FaHeart className="text-red-400 absolute -top-5.5 right-3.5 -rotate-10 w-3 float" />
+                <div className="absolute -bottom-7 -left-9 rotate-35 scale-125">
+                    <div className='float'>
+                        <CoffeeCup />
+                    </div>
+                    <FaHeart className="text-red-400 absolute -top-5.5 right-3.5 -rotate-12 w-2.5 float" />
                     <FaHeart className="text-red-400 absolute -top-2 right-1 rotate-30 w-2 float" />
                 </div>
 

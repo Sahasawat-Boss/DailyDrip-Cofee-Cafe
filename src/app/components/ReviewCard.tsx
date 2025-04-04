@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import ParallaxImage from "./deco/Parallax";
 
 const reviews = [
     {
@@ -86,6 +87,15 @@ export default function ReviewCard() {
                 >
                     <FaChevronRight />
                 </button>
+            </div>
+            <div className="max-w-2xl px-8 mx-auto relative ">
+                <div className="mt-12 rounded-2xl">
+                    <ParallaxImage
+                        imageUrl="/images/gal/about1.jpg"
+                        overlayText="Pouring Moments That Matter."
+                        height="h-[40vh]"
+                    />
+                </div>
             </div>
         </section>
     );
