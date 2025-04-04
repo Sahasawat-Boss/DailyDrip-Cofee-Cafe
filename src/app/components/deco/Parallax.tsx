@@ -1,8 +1,6 @@
-//Reusable Comps with props
-
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type ParallaxImageProps = {
     imageUrl: string;
@@ -10,10 +8,25 @@ type ParallaxImageProps = {
     overlayText?: string;
 };
 
-export default function ParallaxImage({ imageUrl, height = 'h-[70vh]', overlayText }: ParallaxImageProps) {
+export default function ParallaxImage({
+    imageUrl,
+    height = 'h-[70vh]',
+    overlayText,
+}: ParallaxImageProps) {
     const imageRef = useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // Detect if it's a mobile device (viewport width under 768px)
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) return;
+
         const handleScroll = () => {
             if (!imageRef.current) return;
             const offset = window.scrollY;
@@ -22,12 +35,13 @@ export default function ParallaxImage({ imageUrl, height = 'h-[70vh]', overlayTe
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isMobile]);
 
     return (
         <div
             ref={imageRef}
-            className={`relative ${height} bg-cover bg-center bg-fixed`}
+            className={`relative ${height} bg-cover bg-center ${isMobile ? 'bg-scroll' : 'bg-fixed'
+                }`}
             style={{ backgroundImage: `url(${imageUrl})` }}
         >
             {overlayText && (
@@ -40,10 +54,3 @@ export default function ParallaxImage({ imageUrl, height = 'h-[70vh]', overlayTe
         </div>
     );
 }
-
-{/* 
-    
-Usage:
-<ParallaxImage imageUrl="/images/hero-bg.jpg" overlayText="Welcome to DailyDrip" />
-
-*/}
