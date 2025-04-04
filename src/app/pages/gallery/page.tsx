@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CiCoffeeBean } from "react-icons/ci";
+import { GrGallery } from "react-icons/gr";
 
 const galleryImages = [
     "/images/reviews/review4.jpg",
@@ -20,19 +20,24 @@ const galleryImages = [
 
 export default function GalleryPage() {
     return (
-        <section className="px-6 pt-24 pb-10">
+        <section className="px-8 sm:px-12 pt-26 pb-12">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
+                <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-3 float">
                     <div className="relative fade-up2">
                         Gallery
-                        <div className="absolute top-0 -right-6  text-base text-amber-700"><CiCoffeeBean /></div>
-                        <div className="absolute top-3 -right-7.5 text-base rotate-30 text-amber-700"><CiCoffeeBean /></div>
+                        <div className="absolute top-2 -right-6  text-base text-amber-700/50"><GrGallery /></div>
                     </div>
                 </div>
 
+                <p className="max-w-xl mb-6 mx-auto indent-5 fade-in2">
+                    Step into our world through the lens — from rich espresso pours to cozy corners and warm lighting.
+                    This gallery captures the soul of DailyDrip: where every cup tells a story, and every moment is worth sharing.
+                </p>
+
+
                 {/* Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 ">
                     {galleryImages.map((src, index) => (
                         <motion.div
                             key={index}
@@ -45,7 +50,7 @@ export default function GalleryPage() {
                             <img
                                 src={src}
                                 alt={`Gallery ${index + 1}`}
-                                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                                className="w-full h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </motion.div>
                     ))}

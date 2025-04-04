@@ -13,7 +13,7 @@ export default function Contact() {
                 <div className="flex justify-center text-2xl md:text-4xl font-bold italic float ">
                     <div className="relative fade-up2">
                         Contact
-                        <div className="absolute top-0.5 -right-5 text-base text-amber-600/50 rotate-10">
+                        <div className="absolute top-1 -right-5.5 text-base text-amber-600/50 rotate-25">
                             <MdOutlineContactSupport />
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function Contact() {
                 </div>
 
                 {/* Google Map */}
-                <div className="mt-10 aspect-video rounded-lg overflow-hidden shadow-lg border-2 border-gray-300">
+                <div className="mt-10 aspect-video rounded-lg overflow-hidden shadow-lg border-2 border-gray-300 fade-up2">
                     <iframe
                         title="DailyDrip Location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8616501341157!2d98.96295707493586!3d18.796454282407607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9a7d0d93b5%3A0xc7d2fa169c1f4b29!2sNimmanhaemin%20Rd%2C%20Tambon%20Su%20Thep%2C%20Amphoe%20Mueang%20Chiang%20Mai%2C%20Chang%20Wat%20Chiang%20Mai%2050200%2C%20Thailand!5e0!3m2!1sen!2sth!4v1683716713000!5m2!1sen!2sth"

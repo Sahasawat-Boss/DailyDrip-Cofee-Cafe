@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import BeanFloatAround from "./deco/BeanFloatAround";
 
 const menuItems = [
     {
@@ -103,6 +104,8 @@ export default function TodayMenu() {
                         View Menu
                     </Link>
                 </motion.div>
+
+                <BeanFloatAround/>
             </div>
         </section>
     );

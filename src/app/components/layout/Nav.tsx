@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import CofeeCup from '../deco/CofeeCup';
+import CoffeeCup from '../deco/CoffeeCup';
 
 const menuItems = [
     { label: 'Home', href: '/' },
@@ -44,7 +44,7 @@ export default function Navbar() {
                         <div className="relative inline-block">
                             {/* Coffee Cup Icon */}
                             <div className="absolute -top-3 -right-9 scale-35 opacity-80 rotate-20">
-                                <CofeeCup />
+                                <CoffeeCup />
                             </div>
 
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import CofeeCup from "./deco/CofeeCup";
+import CoffeeCup from './deco/CoffeeCup';
 
 export default function Hero() {
     return (
@@ -39,7 +39,7 @@ export default function Hero() {
 
                 {/* Coffee Cup Icon */}
                 <div className="absolute top-3 -right-9 opacity-85 rotate-25 drop-shadow-lg drop-shadow-black/35 scale">
-                    <CofeeCup />
+                    <CoffeeCup />
                 </div>
 
                 {/* Floating beans */}

@@ -1,4 +1,6 @@
+import BeanFloatAroundR from "./deco/BeanFloatAroundR";
 import BeanFloat from "@/app/components/deco/BeanFloat";
+import { GiCoffeeBeans } from "react-icons/gi";
 
 const allMenuItems = [
     {
@@ -60,15 +62,21 @@ export default function AllMenu() {
         <section className="px-6 pb-2">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-6 ">
-                    <div className="fade-up2">
-                        <h2 className="text-2xl md:text-4xl font-bold italic mb-4 float">
+                    <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
+                        <div className="relative fade-up2">
                             All Menu
-                        </h2>
+                            <div className="absolute top-1.5 -right-6  text-base text-amber-700/50"><GiCoffeeBeans /></div>
+                        </div>
                     </div>
-                    <p className="max-w-xl mx-auto fade-in2" >
+                    <p className="max-w-xl mx-auto fade-in" >
                         Browse our full range of drinks — from traditional Thai coffee to creative modern blends.
                     </p>
                 </div>
+
+                <div className='opacity-65 absolute top-[480px] fade-right2'>
+                    <BeanFloatAroundR />
+                </div>
+
                 {/* Menu List Grid */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
                     {allMenuItems.map((item, index) => (
