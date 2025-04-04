@@ -51,9 +51,12 @@ export default function Footer() {
 
                 {/* Social Icons */}
                 <div className="flex justify-center mt-4 gap-5 text-[#da953c] text-lg">
-
-                    <a href="#"><FaFacebookF /></a>
+                    <a href="#" aria-label="Facebook" className="hover:scale-110 transition"><FaFacebookF /></a>
+                    <a href="#" aria-label="Twitter" className="hover:scale-110 transition"><FaTwitter /></a>
+                    <a href="#" aria-label="LinkedIn" className="hover:scale-110 transition"><FaLinkedinIn /></a>
+                    <a href="#" aria-label="Dribbble" className="hover:scale-110 transition"><FaDribbble /></a>
                 </div>
+
             </div>
         </footer>
     );

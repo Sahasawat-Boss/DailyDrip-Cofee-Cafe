@@ -8,6 +8,7 @@ const menuItems = [
     { label: 'Home', href: '/' },
     { label: 'Menu', href: '/pages/menu' },
     { label: 'History', href: '/pages/history' },
+    { label: 'Gallery', href: '/pages/gallery' },
     { label: 'Contact', href: '/pages/contact' },
 ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
                     }`}
             >
                 {/* Logo */}
-                <Link href="/" className="text-xl font-bold transition-all duration-300 no-underline active:scale-70">
+                <Link href="/" className="text-xl font-bold transition-all duration-300 no-underline active:scale-70 fade-in2">
                     <div
                         className={`transition-all duration-300 tracking-wide ${isShrunk ? 'opacity-0 h-0 scale-95' : 'opacity-100 h-auto'}`}
                         style={{

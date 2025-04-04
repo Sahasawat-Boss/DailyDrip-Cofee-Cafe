@@ -8,14 +8,14 @@ export default function History() {
     <section className="px-8 sm:px-12 pt-26 pb-12">
       <div className="max-w-2xl mx-auto relative">
         <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
-          <div className="relative">
+          <div className="relative fade-up2">
             Our History
             <div className="absolute top-0 -right-6  text-base text-amber-700"><CiCoffeeBean /></div>
             <div className="absolute top-3 -right-7.5 text-base rotate-30 text-amber-700"><CiCoffeeBean /></div>
           </div>
         </div>
 
-        <p className="mb-4 mt-4 leading-relaxed indent-5">
+        <p className="mb-4 mt-4 leading-relaxed indent-5 fade-in2">
           DailyDrip began as a humble coffee stall tucked in the old town of Chiang Mai. Inspired
           by the rich flavors of Northern Thai Arabica, we started brewing small-batch coffee
           with a passion for quality and community.

@@ -48,7 +48,7 @@ export default function MusicPlayer() {
                     if (!audioRef.current) return;
                     audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause();
                 }}
-                className="fixed top-3 right-3 p-1.5 bg-white/70 text-[#ddb578] rounded-full shadow z-50 no-focus hover:cursor-pointer active:scale-70"
+                className="fixed top-3 right-3 p-1.5 bg-white/70 text-[#ddb578] rounded-full shadow z-50 no-focus hover:cursor-pointer active:scale-70 fade-right2 "
                 aria-label={isPlaying ? "Pause Music" : "Play Music"}
             >
                 <FaMusic className={isPlaying ? '' : 'opacity-40'} />

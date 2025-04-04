@@ -19,7 +19,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: 'easeOut' }}
-                viewport={{ once: true, amount: 0.6 }}
+                viewport={{ once: false, amount: 0.6 }}
             >
                 <motion.div
                     className="text-4xl md:text-5xl font-bold float"

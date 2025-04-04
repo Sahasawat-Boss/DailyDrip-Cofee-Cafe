@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const menuItems = [
@@ -34,7 +37,14 @@ export default function TodayMenu() {
     return (
         <section className=" px-6 pt-14 pb-2">
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
+                {/* Section Heading */}
+                <motion.div
+                    className="text-center mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                >
                     <h2 className="text-2xl md:text-4xl font-bold italic mb-4 float">
                         Today's Menu
                     </h2>
@@ -42,7 +52,9 @@ export default function TodayMenu() {
                         Explore our handcrafted selection of coffee drinks — each brewed
                         with beans sourced from local farms in Northern Thailand.
                     </p>
-                </div>
+                </motion.div>
+
+                {/* Menu Cards */}
                 <div className="grid px-8 sm:px-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
                     {menuItems.map((item, index) => (
                         <div
@@ -75,12 +87,22 @@ export default function TodayMenu() {
                     ))}
                 </div>
 
-                <div className="flex justify-center items-center mt-6">
-                    <Link href="/pages/menu" className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
-                            shadow-lg hover-r active:scale-70 rounded">
+                {/* View Menu Button */}
+                <motion.div
+                    className="flex justify-center items-center mt-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
+                    <Link
+                        href="/pages/menu"
+                        className="inline-block border px-6 py-2 mb-2 uppercase tracking-wide bg-white text-black 
+                            shadow-lg hover-r active:scale-70 rounded transition-all duration-200"
+                    >
                         View Menu
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

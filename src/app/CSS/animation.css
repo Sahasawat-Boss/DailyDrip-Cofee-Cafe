@@ -60,16 +60,31 @@
 .fade-in {
     animation: fadeIn 0.6s ease-out both;
 }
-.fade-in-up {
+.fade-in2 {
+    animation: fadeIn 0.9s ease-out both;
+}
+.fade-up {
     animation: fadeInUp 0.6s ease-out both;
 }
-
-.fade-in-left {
-    animation: fadeInLeft 0.6s ease-out both;
+.fade-up2 {
+    animation: fadeInUp 0.9s ease-out both;
+}
+.fade-up3 {
+    animation: fadeInUp 1.3s ease-out both;
 }
 
-.fade-in-right {
+.fade-left {
+    animation: fadeInLeft 0.6s ease-out both;
+}
+.fade-left2 {
+    animation: fadeInLeft 0.9s ease-out both;
+}
+
+.fade-right {
     animation: fadeInRight 0.6s ease-out both;
+}
+.fade-right2 {
+    animation: fadeInRight 0.9s ease-out both;
 }
 
 

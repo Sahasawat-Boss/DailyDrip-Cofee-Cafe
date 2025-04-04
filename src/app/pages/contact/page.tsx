@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import ParallaxImage from "@/app/components/deco/Parallax";
 import BeanFloat from "@/app/components/deco/BeanFloat";
 import { MdOutlineContactSupport } from "react-icons/md";
@@ -5,10 +8,10 @@ import { MdOutlineContactSupport } from "react-icons/md";
 export default function Contact() {
     return (
         <section className="px-8 sm:px-12 pt-26 pb-12">
-            <div className="max-w-4xl mx-auto relative">
+            <div className="max-w-4xl mx-auto relative ">
                 {/* Title */}
-                <div className="flex justify-center text-2xl md:text-4xl font-bold italic float">
-                    <div className="relative">
+                <div className="flex justify-center text-2xl md:text-4xl font-bold italic float ">
+                    <div className="relative fade-up2">
                         Contact
                         <div className="absolute top-0.5 -right-5 text-base text-amber-600/50 rotate-10">
                             <MdOutlineContactSupport />
@@ -17,7 +20,7 @@ export default function Contact() {
                 </div>
 
                 {/* Info Section */}
-                <div className="grid md:grid-cols-2 gap-8 bg-white/60 p-6 rounded-lg shadow-md">
+                <div className="grid md:grid-cols-2 gap-8 bg-white/60 p-6 rounded-lg shadow-md fade-in2">
                     {/* DailyDrip Section */}
                     <div>
                         <h4 className="text-lg font-semibold mb-2">DailyDrip</h4>
