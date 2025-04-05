@@ -59,7 +59,11 @@ export default function History() {
         </section>
 
         {/* Floating bean */}
-        <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
+        <div className="absolute -bottom-4 left-4 md:left-14 opacity-60 rotate-slow scale-40">
+          <BeanFloat />
+        </div>
+        {/* Floating bean */}
+        <div className="absolute -bottom-4 right-4 md:right-14 opacity-60 rotate-slow scale-40">
           <BeanFloat />
         </div>
       </div>

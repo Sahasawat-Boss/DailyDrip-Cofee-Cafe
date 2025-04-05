@@ -155,7 +155,7 @@
 
 @keyframes floatAroundSmooth {
     0% {
-        transform: translateX(-15vw) translateY(10px) rotate(0deg);
+        transform: translateX(-5vw) translateY(10px) rotate(0deg);
     }
 
     20% {

@@ -52,7 +52,7 @@ export default function ParallaxImage({
             {/* Overlay Text */}
             {overlayText && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <h2 className="text-black font-semibold text-xl md:text-2xl drop-shadow-xl text-center px-4 tracking-wider italic">
+                    <h2 className="text-black text-shadow-xs text-shadow-white font-semibold text-xl md:text-2xl drop-shadow-xl text-center px-4 tracking-wider italic">
                         {overlayText}
                     </h2>
                 </div>

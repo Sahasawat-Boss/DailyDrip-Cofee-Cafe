@@ -1,5 +1,6 @@
 'use client';
 
+import BeanFloatAroundR from '@/app/components/deco/BeanFloatAroundR';
 import { motion } from 'framer-motion';
 import ParallaxImage from "@/app/components/deco/Parallax";
 import BeanFloat from "@/app/components/deco/BeanFloat";
@@ -7,8 +8,8 @@ import { MdOutlineContactSupport } from "react-icons/md";
 
 export default function Contact() {
     return (
-        <section className="px-8 sm:px-12 pt-26 pb-12">
-            <div className="max-w-4xl mx-auto relative ">
+        <section className="px-8 sm:px-12 pt-26 pb-12 relative">
+            <div className="max-w-3xl mx-auto relative ">
                 {/* Title */}
                 <div className="flex justify-center text-2xl md:text-4xl font-bold italic float ">
                     <div className="relative fade-up2">
@@ -24,7 +25,7 @@ export default function Contact() {
                     {/* DailyDrip Section */}
                     <div>
                         <h4 className="text-lg font-semibold mb-2">DailyDrip</h4>
-                        <p>
+                        <p className='indent-5'>
                             A cozy coffee space in the heart of Chiang Mai, brewing locally sourced beans and delivering bold flavors with warm vibes.
                         </p>
                     </div>
@@ -67,7 +68,7 @@ export default function Contact() {
                 </div>
 
                 {/* Floating bean */}
-                <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
+                <div className="absolute -bottom-12 md:-right-16 -right-4 opacity-60 rotate-slow">
                     <BeanFloat />
                 </div>
 
@@ -78,6 +79,10 @@ export default function Contact() {
                         height="h-[60vh]"
                     />
                 </div>
+            </div>
+
+            <div className='opacity-60 absolute top-[300px] fade-right2'>
+                <BeanFloatAroundR />
             </div>
         </section>
     );

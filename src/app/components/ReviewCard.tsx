@@ -58,13 +58,13 @@ export default function ReviewCard() {
                         className="w-full h-[350px] object-cover"
                     />
                     <div className="absolute inset-0 bg-white/60 p-10 md:p-14 flex flex-col justify-center">
-                        <p className="text-lg italic font-semibold mb-4 max-w-xl">{text}</p>
+                        <p className="text-lg italic font-semibold mb-4 max-w-xl text-shadow-xs text-shadow-white/65">{text}</p>
                         <div className="flex items-center gap-1 mb-2 float">
                             {[...Array(rating)].map((_, i) => (
                                 <FaStar key={i} className="text-yellow-400" />
                             ))}
                         </div>
-                        <p className="italic font-semibold">— {name}</p>
+                        <p className="italic font-semibold text-shadow-xs text-shadow-white/65">— {name}</p>
                     </div>
                 </div>
 
@@ -77,13 +77,13 @@ export default function ReviewCard() {
                 {/* Navigation Buttons */}
                 <button
                     onClick={prev}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover no-focus active:scale-70"
+                    className="absolute left-0 top-1/2 transform border border-black/25 -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover no-focus active:scale-70"
                 >
                     <FaChevronLeft />
                 </button>
                 <button
                     onClick={next}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover no-focus active:scale-70"
+                    className="absolute right-0 top-1/2 transform border border-black/25 -translate-y-1/2 bg-white text-black p-2 rounded-full shadow hover:bg-gray-200 hover no-focus active:scale-70"
                 >
                     <FaChevronRight />
                 </button>
