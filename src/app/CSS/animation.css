@@ -155,7 +155,7 @@
 
 @keyframes floatAroundSmooth {
     0% {
-        transform: translateX(-10px) translateY(10px) rotate(0deg);
+        transform: translateX(-15vw) translateY(10px) rotate(0deg);
     }
 
     20% {
@@ -197,11 +197,11 @@
     }
 
     80% {
-        transform: translateX(10vw) translateY(12px) rotate(3deg);
+        transform: translateX(0vw) translateY(12px) rotate(3deg);
     }
 
     100% {
-        transform: translateX(-100px) translateY(0px) rotate(0deg);
+        transform: translateX(-30vw) translateY(0px) rotate(0deg);
         /* FIXED */
     }
 }

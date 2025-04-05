@@ -36,7 +36,7 @@ const menuItems = [
 
 export default function TodayMenu() {
     return (
-        <section className=" px-6 pt-14 pb-2">
+        <section className=" px-6 pt-14 pb-2 relative">
             <div className="max-w-6xl mx-auto">
                 {/* Section Heading */}
                 <motion.div
@@ -104,8 +104,10 @@ export default function TodayMenu() {
                         View Menu
                     </Link>
                 </motion.div>
+            </div>
 
-                <BeanFloatAround/>
+            <div className='opacity-65 absolute fade-right2'>
+                <BeanFloatAround />
             </div>
         </section>
     );

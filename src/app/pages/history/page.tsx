@@ -2,6 +2,7 @@
 import BeanFloatAround from "@/app/components/deco/BeanFloatAround";
 import BeanFloat from "@/app/components/deco/BeanFloat";
 import { FaHourglassStart } from "react-icons/fa";
+import BeanFloatAroundR from "@/app/components/deco/BeanFloatAroundR";
 
 export default function History() {
   return (
@@ -62,8 +63,11 @@ export default function History() {
           <BeanFloat />
         </div>
       </div>
-      <div className='absolute opacity-80 top-72 fade-left2 '>
+      <div className='absolute opacity-60 top-96 fade-left2 '>
         <BeanFloatAround />
+      </div>
+      <div className='absolute opacity-60 bottom-96 fade-left2 '>
+        <BeanFloatAroundR />
       </div>
     </section>
   );

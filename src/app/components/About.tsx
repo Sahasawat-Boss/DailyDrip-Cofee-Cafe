@@ -8,15 +8,16 @@ import { FaRegClock, FaHeart } from "react-icons/fa";
 
 export default function About() {
     return (
-        <section className="px-8 sm:px-12 py-10 md:py-14">
+        <section className="px-8 sm:px-12 py-10 md:py-14 relative">
+
+            <div className='opacity-80 absolute -top-4 fade-right2 -rotate-4'>
+                <BeanFloatAroundR />
+            </div>
+
             <div className="max-w-3xl mx-auto relative">
                 <div className="flex text-2xl md:text-4xl font-bold italic mb-4 fade-right2">
                     <div>DailyDrip</div>
                     <div className="ml-1.5 mt-0.5 text-sm text-amber-900/65"><FaRegClock /></div>
-                </div>
-
-                <div className='opacity-80 absolute -top-18 fade-right2'>
-                    <BeanFloatAroundR />
                 </div>
 
                 <section className='fade-in'>
@@ -43,9 +44,6 @@ export default function About() {
                     </div>
 
                 </section>
-                <div className="absolute -bottom-16 -right-4 opacity-70 rotate-slow">
-                    <BeanFloat />
-                </div>
                 <div className="absolute -bottom-7 -left-9 rotate-35 scale-125">
                     <div className='float'>
                         <CoffeeCup />
@@ -54,6 +52,9 @@ export default function About() {
                     <FaHeart className="text-red-400 absolute -top-2 right-1 rotate-30 w-2 float" />
                 </div>
 
+            </div>
+            <div className="absolute -bottom-16 -right-4 opacity-70 rotate-slow">
+                <BeanFloat />
             </div>
         </section>
     );

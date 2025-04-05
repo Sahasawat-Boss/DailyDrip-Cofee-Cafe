@@ -1,4 +1,5 @@
 import BeanFloatAroundR from "./deco/BeanFloatAroundR";
+import BeanFloatAround from "./deco/BeanFloatAround";
 import BeanFloat from "@/app/components/deco/BeanFloat";
 import { GiCoffeeBeans } from "react-icons/gi";
 
@@ -59,8 +60,13 @@ const allMenuItems = [
 
 export default function AllMenu() {
     return (
-        <section className="px-6 pb-2">
-            <div className="max-w-6xl mx-auto">
+        <section className="px-6 pb-2 relative">
+
+            <div className='opacity-60 absolute top-[480px] fade-right2'>
+                <BeanFloatAroundR />
+            </div>
+
+            <div className="max-w-6xl mx-auto relative">
                 <div className="text-center mb-6 ">
                     <div className="flex justify-center text-2xl md:text-4xl font-bold italic mb-4 float">
                         <div className="relative fade-up2">
@@ -71,10 +77,6 @@ export default function AllMenu() {
                     <p className="max-w-xl mx-auto fade-in" >
                         Browse our full range of drinks — from traditional Thai coffee to creative modern blends.
                     </p>
-                </div>
-
-                <div className='opacity-65 absolute top-[480px] fade-right2'>
-                    <BeanFloatAroundR />
                 </div>
 
                 {/* Menu List Grid */}
@@ -104,11 +106,10 @@ export default function AllMenu() {
                         </div>
                     ))}
                 </div>
-
-                {/* Floating bean */}
-                <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
-                    <BeanFloat />
-                </div>
+            </div>
+            {/* Floating bean */}
+            <div className="absolute -bottom-12 -right-4 opacity-60 rotate-slow">
+                <BeanFloat />
             </div>
         </section>
     );

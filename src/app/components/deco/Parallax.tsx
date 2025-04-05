@@ -30,7 +30,7 @@ export default function ParallaxImage({
         const handleScroll = () => {
             if (!imageRef.current) return;
             const offset = window.scrollY;
-            imageRef.current.style.backgroundPositionY = `${offset * 0.5}px`;
+            imageRef.current.style.backgroundPositionY = `${offset * 0.8}px`;
         };
 
         window.addEventListener('scroll', handleScroll);
